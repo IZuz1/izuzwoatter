@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Subscription": {
+      "title": "Subscription",
+      "description": "User subscriptions for water notifications",
+      "type": "object",
+      "properties": {
+        "chatId": {
+          "type": "string",
+          "description": "Telegram Chat ID"
+        },
+        "districtCode": {
+          "type": "string",
+          "description": "Code of the subscribed district"
+        },
+        "districtName": {
+          "type": "string",
+          "description": "User-friendly name of the district"
+        },
+        "username": {
+          "type": "string",
+          "description": "Telegram username of the subscriber"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when subscription was created"
+        }
+      },
+      "required": ["chatId", "districtCode", "districtName", "createdAt"]
+    }
+  },
+  "firestore": {
+    "subscriptions/{chatId}": {
+      "schema": "Subscription",
+      "description": "List of active Telegram subscribers and their district subscriptions"
+    }
+  }
+}

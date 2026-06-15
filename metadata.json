@@ -1,0 +1,6 @@
+{
+  "name": "Донецк Вода-Панель",
+  "description": "Мониторинг расписания подачи воды в г. Донецке и интеграция с Telegram-ботом оповещений",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
